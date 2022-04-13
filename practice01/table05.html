@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table05</title>
+    <style>
+        td {text-align: center;}
+        .subject{background-color: aquamarine;}
+        .score{background-color: rgb(47, 169, 3);}
+        .average{background-color: rgb(201, 30, 30);}
+    </style>
+</head>
+<body>
+    <table border="1px">
+        <colgroup> <!--열 그룹핑-->
+            <col class="subject"> <!--colgroup의 자식 태그로서 지정한 열에 대해 서로 다른 포맷팅 정의-->
+            <col span="2" class="score" >
+            <col class="average">
+        </colgroup>
+        <tr>
+            <th>과목</th><th>중간시험</th><th>기말시험</th><th>평균</th>
+        </tr>
+        <tr>
+            <td>국어</td><td>90</td><td>95</td><td>92.5</td>
+        </tr>
+        <tr>
+            <td>영어</td><td>96</td><td>90</td><td>93.0</td>
+        </tr>
+        <tr>
+            <td>수학</td><td>85</td><td>95</td><td>90.0</td>
+        </tr>
+    </table>
+</body>
+</html>
