@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		/*
+			this 키워드를 사용해서 grades.show() 호출 시
+			a:10
+			b:20
+			c:30
+			을 출력해라
+		*/
+		
+		let grades = {
+				'list' : {'a':10, 'b':20, 'c':30},
+				'show' : function() {
+					for(let name in this.list){
+						document.write(name + " : " + this.list[name] + '<br>');
+					}
+				}
+		};
+			
+		grades.show();
+	</script>
+</body>
+</html>
