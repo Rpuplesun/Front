@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>이름</th>
+            <td><input type="text" name="user_name"></td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td><input type="text" id="address_Main" name="address" vlaue =""readonly /></td>
+            <td><button onclick="hello()">주소 찾기</button></td>
+        </tr>
+        <tr>
+            <th>상세 주소</th>
+            <td><input type="text" name="address_Detail" /></td>
+        </tr>
+    </table>
+</body>
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+	function hello() {
+		new daum.Postcode({
+            oncomplete : function(data) {
+                document.getElementById("address_Main").value = data.roadAddress;
+            }
+        }).open();
+	}
+    
+</script>
+</html>
