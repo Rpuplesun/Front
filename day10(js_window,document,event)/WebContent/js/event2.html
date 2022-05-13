@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>10 + 50 = <span id="question"> ? </span> </h1>
+	<input type="button" value="결과보기" onclick="printResult();">
+	
+	<script>
+		// 문재1. 결과보기 버튼 클릭 시
+		// 10 + 50의 값의 결과를 ? 안에 넣어줄 것
+		
+		function sum(a, b){
+			return a+b;
+		}
+				
+		function printResult () {
+			let result = sum(10, 50);			
+			document.getElementById("question").innerHTML = result;
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
